@@ -122,6 +122,8 @@ def update_profile():
             
             cur = mysql.connection.cursor()
             cur.execute("UPDATE user SET description = %s, name=%s, address=%s, email=%s, number=%s where username=%s",([description,name,address,email,number,session['username']]))
+            cur.execute("UPDATE posts SET name=%s where user_id=%s",([name,session['id']]))
+
             mysql.connection.commit()
             cur.close()
             session['name'] = name

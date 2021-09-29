@@ -5,9 +5,7 @@ Create a vars.json file paste the following data
 {
     "variables":
     {
-        "fb_url": "<your_facebook_url>",
-        "gh_url": "<your_github_url>",
-        "tw_url": "<your_twiiter_url>"
+        "upload_location" : "/static/img"
     },
     "sql_conf":
     {

@@ -2,14 +2,12 @@
 {% block subcontent %}
 <head>
     <style>
-        
-
           body{
     background: #f7f7ff;
-    margin-top:20px;
+    
 }
 .card {
-    position: relative;
+    
     display: flex;
     flex-direction: column;
     min-width: 0;
@@ -27,10 +25,10 @@
     </style>
 </head>
 
-<div class="col-lg-8">
-    <form action="/update/user/" method="POST">
+<div class="col-lg-8 ">
+    <form action="/update/user/" method="POST" style="text-align:center;">
 
-					<div class="card" justify-content-center align-items-center >
+					<div class="card " >
 						<div class="card-body">
 							<div class="row justify-content-center align-items-center h-100">
 								<div class="col-sm-3">
@@ -42,6 +40,7 @@
 									<input type="text" class="form-control" value="{{session['name']}}" name="name">
 								</div>
 							</div>
+							<br>
 							<div class="row mb-3">
 								<div class="col-sm-3">
 									<h6 class="mb-0">Email</h6>

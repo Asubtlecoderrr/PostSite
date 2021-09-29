@@ -1,8 +1,0 @@
-{ "variables": { 
-        "upload_location" : "/static/img" }, 
-        "sql_conf": { 
-        "mysql_host": "localhost",
-        "mysql_user": "root",
-        "mysql_password": "Tiloni@123", 
-        "mysql_db": "taskdb", 
-        "mysql_port": 3306 } }

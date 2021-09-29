@@ -1,0 +1,34 @@
+<!--Navbar Code-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<nav class="navbar  " style="background-color: black; color: white;">
+    <div class="container-fluid">
+        <div >
+      <h3  style="text-align: center;"><a class="nav-link active" aria-current="page" href="/"><b>Profile</b></a> </h3>
+    </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"><i class="fa fa-bars" style="color:#fff; font-size:28px;"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        {% if session['logged_in'] == True %}
+          <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/home">Home</a>
+              <a class="nav-link active" aria-current="page" href="/create">Add Post</a>
+              <a class="nav-link active" aria-current="page" href="/user/{{session['username']}}">Profile</a>
+              <a class="nav-link active" aria-current="page" href="/myposts/{{session['id']}}">My Posts</a>
+              <a class="nav-link active" aria-current="page" href="/logout">Logout</a>
+            </li>
+            
+            
+        {% else %}
+            
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/user/login">Login</a>
+              <a class="nav-link active" aria-current="page" href="/user/register">Register</a>
+            </li>
+        {% endif %}
+        </ul>
+          </div>
+    </div>
+  </nav>

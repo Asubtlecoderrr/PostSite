@@ -1,0 +1,77 @@
+{% include 'layout.html' %}
+<style>
+ article {
+        margin-bottom: 2em;
+        padding-bottom: 2em;
+        border-bottom: 1px solid #ccc;
+    }
+    
+    .social a {
+        padding: 0 .5em;
+    }
+    
+    .page-header {
+        margin-bottom: 2rem;
+    }
+    
+    .text {
+        margin-left: 150px;
+    }
+    
+    @media screen and (max-width: 728px) {
+        .row {
+            margin: auto;
+        }
+    }
+    
+    .col-md-8:hover {
+        background-color: #d8d8d8;
+    }
+</style>
+<body>
+    <div class="tm-main-content">
+        <section class="tm-margin-b-l">
+           
+            <p></p>
+<div class="row text">
+            {% for post in posts %}
+            <div class="col-md-8">
+                <article id="">
+                    <header>
+                        
+                        <h2>
+                            
+                            {{post[-5]}}</h2>
+                    </header>
+                    <div class="entry-content">
+
+                        <p class="lead">{{post[-3]}}</p>
+
+                    </div>
+                    <div class="meta">
+                            Written by <span class="author"><a href="/user/{{post[-1]}}">{{post[-4]}}</a></span> on <span class="date">{{post[-2]}}</span>
+                        </div>
+                    <footer>
+                    </footer>
+                </article>
+                
+            </div>
+            {% endfor %}
+
+        </div>
+
+        </section>
+
+        <footer>
+
+        </footer>
+        </div>
+
+
+        <script src="js/jquery-1.11.3.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

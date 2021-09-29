@@ -56,7 +56,7 @@ def customer_login():
                 session['number']=user[-1]
                 session['desc']=user[4]
                 flash(f"Welcome {session['name']}!! Your Login is Successful", 'success')
-                return redirect ('/user/{}'.format(session['username']))
+                return redirect ('/home')
             else:
                 cur.close()
                 flash('Wrong Password!! Please Check Again.', 'danger')
